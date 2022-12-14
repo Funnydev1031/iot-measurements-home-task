@@ -1,0 +1,33 @@
+# TLS docs https://mindsers.blog/post/https-using-nginx-certbot-docker/
+
+version: "3"
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      args:
+        BACKEND_PORT: 65000
+    environment:
+      BACKEND_PORT: 65000
+    volumes:
+      - ./backend:/app
+    ports:
+      - 65000:65000
+    restart: on-failure
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      args:
+        FRONTEND_PORT: 65001
+    environment:
+      FRONTEND_PORT: 65001
+      BACKEND_PORT: 65000
+    volumes:
+      - ./frontend/src:/app/src
+    ports:
+      - 65001:65001
+    restart: on-failure

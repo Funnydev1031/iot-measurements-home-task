@@ -1,0 +1,33 @@
+locations:
+  - id: 1
+    name: Office
+  - id: 2
+    name: Kitchen
+  - id: 3
+    name: Lobby
+
+devices:
+  - id: 1
+    location_id: 1
+    mac: d4:db:42:c5:82:73
+  - id: 2
+    location_id: 1
+    mac: 7b:b7:c4:29:bf:b4
+  - id: 3
+    location_id: 2
+    mac: 50:fb:e3:8c:f9:41
+  - id: 4
+    location_id: 3
+    mac: 37:60:8b:66:6c:ba
+
+metrics:
+  - id: 1
+    name: open
+  - id: 2
+    name: temperature
+    unit: °c
+  - id: 3
+    name: strength
+    unit: "%"
+  - id: 4
+    name: ssid

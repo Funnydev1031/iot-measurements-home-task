@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021.String"],
+    "target": "es2017",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "jsx": "react"
+  },
+  "exclude": ["node_modules", "data"]
+}
